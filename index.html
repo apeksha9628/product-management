@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XYZ Traders Product Data</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Product Data Management</h1>
+    <form id="productForm" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="productName">Product:</label>
+        <select id="productName" required>
+          <option value="">-- Select Product --</option>
+          <option value="Smartphone">Smartphone</option>
+          <option value="Fan">Fan</option>
+          <option value="Light Bulb">Light Bulb</option>
+          <option value="Refrigerator">Refrigerator</option>
+          <option value="Television">Television</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="serialNumber">Serial Number:</label>
+        <input type="text" id="serialNumber" required>
+      </div>
+      <div class="form-group">
+        <label for="voltage">Voltage:</label>
+        <input type="number" id="voltage" required>
+      </div>
+      <div class="form-group">
+        <label for="warranty">Warranty:</label>
+        <input type="text" id="warranty" required>
+      </div>
+      <div class="form-group">
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" required>
+      </div>
+      <div class="form-group">
+        <label for="rating">Rating:</label>
+        <input type="number" id="rating" required>
+      </div>
+      <div class="form-group">
+        <label for="excelFile">Upload Excel Sheet:</label>
+        <input type="file" id="excelFile" accept=".xlsx, .xls" required>
+      </div>
+      <input type="submit" value="Submit">
+    </form>
+    <div id="successMessage" class="success-message" style="display: none;"></div>
+    <div id="errorMessage" class="error-message" style="display: none;"></div>
+    <a href="#" class="download-btn" id="downloadBtn" style="display: none;">Download Modified Excel</a>
+  </div>
+
+  
+    <script src="xlsx.min.js"></script>
+  <script src="app.js"></script>
+  <script src="https://unpkg.com/xlsx-style/dist/xlsx.full.min.js"></script>
+
+
+</body>
+
+
+</html>
